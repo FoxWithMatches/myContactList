@@ -25,7 +25,7 @@ struct DetailsContactView: View {
             InfoPerson(image: Contacts.email.rawValue,
                        text: person.email)
         }
-        .navigationTitle("\(person.fullName)")
+        .navigationTitle(person.fullName)
     }
 }
 

@@ -14,13 +14,11 @@ struct ContactListSection: View {
     var body: some View {
         NavigationView {
             List(personsList) { person in
-                Section {
+                Section(person.fullName) {
                     InfoPerson(image: Contacts.phone.rawValue,
                                text: person.phoneNumber)
                     InfoPerson(image: Contacts.email.rawValue,
                                text: person.email)
-                } header: {
-                    Text("\(person.fullName)")
                 }
             }
             .listStyle(.plain)
